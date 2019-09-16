@@ -8,6 +8,11 @@ import java.util.List;
 
 public class Main {
 
+    static void reverse(String a[]) {
+        Collections.reverse(Arrays.asList(a));
+        System.out.println(Arrays.asList(a));
+    }
+
     /*static void input() {
         Scanner Usernum = new Scanner(System.in);
         System.out.println("Enter a Number: ");
@@ -93,16 +98,17 @@ public class Main {
     public static void main(String[] args) {
 
      for (int i = 1; i <= 256; i++) {
+         String[] fizzbuzz = {"Fizz", "Fezz", "Buzz", "Bang", "Bong"};
          /*List<String> list = Arrays.asList("Fizz", "Fezz", "Buzz", "Bang", "Bong");*/
          String number = "";
-         if(i % 3 == 0) number += list;
-         if (i % 13 == 0) number += "Fezz";
-         if(i % 5 == 0) number += "Buzz";
-         if (i % 7 == 0) number += "Bang";
-         if (i % 11 == 0 && i % 13 == 0) number = "Fezz"+"Bong";
+         if(i % 3 == 0) number += fizzbuzz[0];
+         if (i % 13 == 0) number += fizzbuzz[1];
+         if(i % 5 == 0) number += fizzbuzz[2];
+         if (i % 7 == 0) number += fizzbuzz[3];
+         if (i % 11 == 0 && i % 13 == 0) number = fizzbuzz[1]+fizzbuzz[4];
             else if (i % 11 == 0) number = "Bong";
          if (number.isEmpty()) number += i;
-         //if (i % 17 == 0)
+         if (i % 17 == 0)   reverse(fizzbuzz);
 
          System.out.println(number);
 
