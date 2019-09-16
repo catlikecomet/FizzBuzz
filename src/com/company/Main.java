@@ -11,7 +11,7 @@ public class Main {
         String elvn = "Bong";
         String thirt = "Fezz";
 
-        for (i = 1; i <= 106; i++) {
+        for (i = 1; i <= 256; i++) {
 
             if (i % 3 == 0) {
                 System.out.println(three);
@@ -21,6 +21,8 @@ public class Main {
                 System.out.println(sev);
             } else if (i % 11 == 0) {
                 System.out.println(elvn);
+            } else if (i % 13 == 0) {
+                System.out.println(thirt);
             } else {
                 System.out.println(i);
             }
@@ -30,23 +32,50 @@ public class Main {
                     System.out.println(three+sev);
                 } else if (i % 3 == 0 && i % 11 == 0) {
                     System.out.println(elvn);
+                } else if (i % 3 == 0 && i % 13 == 0) {
+                    System.out.println(three+thirt);
                 }
                     if (i % 5 == 0 && i % 7 == 0) {
                         System.out.println(five+sev);
                     } else if ( i % 5 == 0 && i % 11 == 0) {
                         System.out.println(elvn);
+                    } else if ( i % 5 == 0 && i % 13 == 0) {
+                        System.out.println(thirt+five);
                     }
                         if (i % 7 == 0 && i % 11 == 0){
                             System.out.println(elvn);
+                        } else if (i % 7 == 0 && i % 13 == 0) {
+                            System.out.println(thirt+sev);
                         }
+                            if (i % 11 == 0 && i % 13 == 0){
+                                System.out.println(thirt+elvn);
+                            }
+
                             if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0){
                                 System.out.println(three+five+sev);
-                            }else if (i % 3 == 0 && i % 7 == 0 && i % 11 == 0){
+                            }else if (i % 3 == 0 && i % 5 == 0 && i % 11 == 0) {
                                 System.out.println(elvn);
+                            }else if (i % 3 == 0 && i % 5 == 0 && i % 13 == 0) {
+                                System.out.println(three+thirt+five);
+                            }else if (i % 3 == 0 && i % 5 == 0 && i % 17 == 0) {
+                                System.out.println(five+three);
+                            } else if (i % 3 == 0 && i % 7 == 0 && i % 11 == 0){
+                                System.out.println(elvn);
+                            }else if (i % 3 == 0 && i % 7 ==0 && i % 13 == 0){
+                                System.out.println(three+thirt+sev);
+                            } else if (i % 3 == 0 && i % 11 == 0 && i % 13 == 0)
+                                System.out.println(thirt+elvn);
                             }
+
                                 if (i % 5 == 0 && i % 7 == 0 && i % 11 == 0){
                                     System.out.println(elvn);
+                                } else if (i % 5 == 0 && i % 7 == 0 && i % 13 == 0) {
+                                    System.out.println(thirt+five+sev);
+                                } else if (i % 5 == 0 && i % 11 == 0 && i % 13 == 0) {
+                                    System.out.println(thirt+elvn);
                                 }
+
+
         }
         /*for (i = 1;  i <= 100; i++ ) {
 
@@ -81,4 +110,4 @@ public class Main {
 
     }*/
     }
-}
+
