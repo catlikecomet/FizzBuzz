@@ -11,9 +11,11 @@ public class Main {
         for (i = 1;  i <= 100; i++ ) {
 
 
-            if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
-                System.out.println("FizzBuzzBang");
+            if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0 && i % 11 == 0) {
+                System.out.println("Bong");
 
+            } else if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+                System.out.println("FizzBuzzBang");
             } else if (i % 3 == 0 && i % 5 == 0){
                 System.out.println("FizzBuzz");
             } else if (i % 3 == 0 && i % 7 == 0) {
@@ -24,6 +26,10 @@ public class Main {
                 System.out.println("Buzz");
             } else if (i % 7 == 0) {
                 System.out.println("Bang");
+            } else if (i % 11 == 0){
+                System.out.println("Bong");
+            } else if (i % 13 == 0){
+                System.out.println("Fezz");
             }
 
                 else {
