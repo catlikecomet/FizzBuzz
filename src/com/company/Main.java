@@ -2,6 +2,7 @@ package com.company;
 
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -98,17 +99,21 @@ public class Main {
     public static void main(String[] args) {
 
      for (int i = 1; i <= 256; i++) {
-         String[] fizzbuzz = {"Fizz", "Fezz", "Buzz", "Bang", "Bong"};
-         /*List<String> list = Arrays.asList("Fizz", "Fezz", "Buzz", "Bang", "Bong");*/
+         /*String[] fizzbuzz = {"Fizz", "Fezz", "Buzz", "Bang", "Bong"};
+         List<String> list = Arrays.asList("Fizz", "Fezz", "Buzz", "Bang", "Bong");*/
+         List<String> fizzbuzz = new ArrayList<>(
+                 Arrays.asList());
+
          String number = "";
-         if(i % 3 == 0) number += fizzbuzz[0];
-         if (i % 13 == 0) number += fizzbuzz[1];
-         if(i % 5 == 0) number += fizzbuzz[2];
-         if (i % 7 == 0) number += fizzbuzz[3];
-         if (i % 11 == 0 && i % 13 == 0) number = fizzbuzz[1]+fizzbuzz[4];
+         if(i % 3 == 0) number += fizzbuzz.add("Fizz");
+         if (i % 13 == 0) number += fizzbuzz.add("Fezz");
+         if(i % 5 == 0) number += fizzbuzz.add("Buzz");
+         if (i % 7 == 0) number += fizzbuzz.add("Bang");
+         if (i % 11 == 0 && i % 13 == 0) number += fizzbuzz.add("FezzBong");
             else if (i % 11 == 0) number = "Bong";
          if (number.isEmpty()) number += i;
-         if (i % 17 == 0)   reverse(fizzbuzz);
+         if (i % 17 == 0) Collections.reverse(fizzbuzz);
+                          System.out.println(fizzbuzz);;
 
          System.out.println(number);
 
