@@ -98,28 +98,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-     for (int i = 1; i <= 256; i++) {
+        for (int i = 1; i <= 256; i++) {
          /*String[] fizzbuzz = {"Fizz", "Fezz", "Buzz", "Bang", "Bong"};
          List<String> list = Arrays.asList("Fizz", "Fezz", "Buzz", "Bang", "Bong");*/
-         List<String> fizzbuzz = new ArrayList<>(
-                 Arrays.asList());
+            List<String> fizzbuzz = new ArrayList<>();
+            fizzbuzz.add("Fizz");
+            fizzbuzz.add("Fezz");
+            fizzbuzz.add("Buzz");
+            fizzbuzz.add("Bang");
+            fizzbuzz.add("FezzBong");
 
-         String number = "";
-         if(i % 3 == 0) number += fizzbuzz.add("Fizz");
-         if (i % 13 == 0) number += fizzbuzz.add("Fezz");
-         if(i % 5 == 0) number += fizzbuzz.add("Buzz");
-         if (i % 7 == 0) number += fizzbuzz.add("Bang");
-         if (i % 11 == 0 && i % 13 == 0) number += fizzbuzz.add("FezzBong");
+            String number = "";
+
+            if (i % 3 == 0) number += fizzbuzz.get(0);
+            if (i % 13 == 0) number += fizzbuzz.get(1);
+            if (i % 5 == 0) number += fizzbuzz.get(2);
+            if (i % 7 == 0) number += fizzbuzz.get(3);
+            if (i % 11 == 0 && i % 13 == 0) number += fizzbuzz.get(4);
             else if (i % 11 == 0) number = "Bong";
-         if (number.isEmpty()) number += i;
-         if (i % 17 == 0) Collections.reverse(fizzbuzz);
-                          System.out.println(fizzbuzz);;
+            if (number.isEmpty()) number += i;
 
-         System.out.println(number);
+            if (i % 17 == 0) {
+                Collections.reverse(fizzbuzz);
+                number += fizzbuzz;
+            }
+
+            System.out.println(number);}
+
+
+
 
         }
     }
-}
+
+
 
 
 
