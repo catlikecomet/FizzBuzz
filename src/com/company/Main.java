@@ -9,10 +9,7 @@ import java.util.List;
 
 public class Main {
 
-    static void reverse(String a[]) {
-        Collections.reverse(Arrays.asList(a));
-        System.out.println(Arrays.asList(a));
-    }
+
 
     /*static void input() {
         Scanner Usernum = new Scanner(System.in);
@@ -118,7 +115,7 @@ public class Main {
             else if (i % 11 == 0) number = "Bong";
             if (number.isEmpty()) number += i;
 
-            if (i % 17 == 0) {
+            if ((!number.isEmpty()) && (i % 17 == 0)) {
                 Collections.reverse(fizzbuzz);
                 number += fizzbuzz;
             }
