@@ -1,7 +1,7 @@
 package com.company;
 
 public class Main {
-    static void method() {
+    static void fizzbuzz() {
         int i = 0;
         String three = "Fizz";
         String five = "Buzz";
@@ -75,7 +75,7 @@ public class Main {
 
     }
     public static void main(String[] args) {
-       method();
+       fizzbuzz();
 
 
 
