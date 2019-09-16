@@ -1,6 +1,17 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
+
+    /*static void input() {
+        Scanner Usernum = new Scanner(System.in);
+        System.out.println("Enter a Number: ");
+
+        int user = Usernum.nextInt();
+        System.out.println("Number chosen: "+user);
+
+    }
     static void fizzbuzz() {
         int i = 0;
         String three = "Fizz";
@@ -73,42 +84,48 @@ public class Main {
         }
 
 
-    }
+    }*/
+
     public static void main(String[] args) {
-       fizzbuzz();
+        //fizzbuzz();
+
+        int i = 0;
+        String three = "Fizz";
+        String five = "Buzz";
+        String sev = "Bang";
+        String elvn = "Bong";
+        String thirt = "Fezz";
 
 
+        for (i = 1; i <= 100; i++) {
+            boolean hasenteredrule = false;
 
-
-
-
-
-
-
-
-
-
-        /*for (i = 1; i <= 100; i++) {
             if (i % 3 == 0) {
                 System.out.println(three);
+                hasenteredrule = true;
             }
 
             if (i % 5 == 0) {
-                System.out.println(nums+five);
+                System.out.println(five);
+                hasenteredrule = true;
             }
             if (i % 7 == 0) {
-                System.out.println(nums+sev);
+                System.out.println(sev);
+                hasenteredrule = true;
             }
             if (i % 11 == 0) {
-                System.out.println(nums+elvn);
+                System.out.println(elvn);
+                hasenteredrule = true;
             }
             if (i % 13 == 0) {
-                System.out.println(nums+thirt);
+                System.out.println(thirt);
+                hasenteredrule = true;
             }
+            if (hasenteredrule == false) {
+                System.out.println(i);
 
+            }
         }
     }
-}*/
-
-    }
 }
+
