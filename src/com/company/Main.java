@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static java.util.Collections.*;
+
 public class Main {
 
 
@@ -99,28 +101,30 @@ public class Main {
          /*String[] fizzbuzz = {"Fizz", "Fezz", "Buzz", "Bang", "Bong"};
          List<String> list = Arrays.asList("Fizz", "Fezz", "Buzz", "Bang", "Bong");*/
             List<String> fizzbuzz = new ArrayList<>();
+            List<String> buzzfizz = new ArrayList<>();
             fizzbuzz.add("Fizz");
             fizzbuzz.add("Fezz");
             fizzbuzz.add("Buzz");
             fizzbuzz.add("Bang");
             fizzbuzz.add("FezzBong");
 
-            String number = "";
+            String output = "";
 
-            if (i % 3 == 0) number += fizzbuzz.get(0);
-            if (i % 13 == 0) number += fizzbuzz.get(1);
-            if (i % 5 == 0) number += fizzbuzz.get(2);
-            if (i % 7 == 0) number += fizzbuzz.get(3);
-            if (i % 11 == 0 && i % 13 == 0) number += fizzbuzz.get(4);
-            else if (i % 11 == 0) number = "Bong";
-            if (number.isEmpty()) number += i;
+            if (i % 3 == 0) output += fizzbuzz.get(0);
+            if (i % 13 == 0) output += fizzbuzz.get(1);
+            if (i % 5 == 0) output += fizzbuzz.get(2);
+            if (i % 7 == 0) output += fizzbuzz.get(3);
+            if (i % 11 == 0 && i % 13 == 0) output += fizzbuzz.get(4);
+            else if (i % 11 == 0) output = "Bong";
+            if (output.isEmpty()) output += i;
 
-            if ((!number.isEmpty()) && (i % 17 == 0)) {
-                Collections.reverse(fizzbuzz);
-                number += fizzbuzz;
-            }
 
-            System.out.println(number);}
+            /*if (i % 7 == 0 && i % 17 == 0) output += fizzbuzz.get(1);
+            if (i % 5 == 0 && i % 17 == 0) output += fizzbuzz.get(2);
+            if (i % 13 == 0 && i % 17 == 0) output += fizzbuzz.get(3);
+            if (i % 3 == 0 && i % 17 == 0) output += fizzbuzz.get(4);*/
+
+            System.out.println(output);}
 
 
 
